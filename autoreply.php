@@ -36,17 +36,15 @@ if (!is_null($events['events'])) {
 			    'Authorization: Bearer '.$tokken,
 			);		
 
-			$ch = curl_init();  
+			$ch = curl_init($url);
+			curl_setopt($ch, CURLOPT_CUSTOMREQUEST, "POST");
+			curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+			curl_setopt($ch, CURLOPT_POSTFIELDS, $post);
 			curl_setopt($ch, CURLOPT_HTTPHEADER, $headers);
-			curl_setopt($ch,CURLOPT_URL,$url);
-			curl_setopt($ch,CURLOPT_RETURNTRANSFER,true);
 			curl_setopt($ch, CURLOPT_FOLLOWLOCATION, 1);
-			curl_setopt($ch, CURLOPT_POST, 1);
-			curl_setopt($ch, CURLOPT_POSTFIELDS,$post); 
-			$output=curl_exec($ch);
-			 
+			$result = curl_exec($ch);
 			curl_close($ch);
-			echo $output . "\r\n";
+			echo $result . "\r\n";
 
 		}
 	}

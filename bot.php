@@ -5,7 +5,7 @@ $tokken = "t/xNpwqsTKwcyJFWZ1EWncDEk4fOZ6sYPUXYKGapCCRkZRpd51BqoJD6znAlZMa4Okomj
 
 $headers = array(
     'Authorization: Bearer '.$tokken,
-    )
+    );
 $url = 'https://api.line.me/v1/oauth/verify';
 
 $ch = curl_init();  

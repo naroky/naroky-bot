@@ -46,7 +46,7 @@ if (!is_null($events['events'])) {
 			$output=curl_exec($ch);
 			 
 			curl_close($ch);
-			echo $output;
+			echo $output . "\r\n";
 
 		}
 	}

@@ -1,12 +1,10 @@
-<?php 
-//echo "I am a bot";
+<?php
+$access_token = 't/xNpwqsTKwcyJFWZ1EWncDEk4fOZ6sYPUXYKGapCCRkZRpd51BqoJD6znAlZMa4OkomjZT8Q8yvRLskNXmPotVhZnOJ1BiRK42YBbYr/+vkYXBeA1+ksR1zMGPpPr+28/iM5wVgruEPQgC/vD4xmAdB04t89/1O/w1cDnyilFU=';
 
-$tokken = "t/xNpwqsTKwcyJFWZ1EWncDEk4fOZ6sYPUXYKGapCCRkZRpd51BqoJD6znAlZMa4OkomjZT8Q8yvRLskNXmPotVhZnOJ1BiRK42YBbYr/+vkYXBeA1+ksR1zMGPpPr+28/iM5wVgruEPQgC/vD4xmAdB04t89/1O/w1cDnyilFU=";
-
+// Get POST body content
 $content = file_get_contents('php://input');
 // Parse JSON
 $events = json_decode($content, true);
-
 // Validate parsed JSON data
 if (!is_null($events['events'])) {
 	// Loop through each event
@@ -31,10 +29,7 @@ if (!is_null($events['events'])) {
 				'messages' => [$messages],
 			];
 			$post = json_encode($data);
-			$headers = array(
-				'Content-Type:application/json',	
-			    'Authorization: Bearer '.$tokken,
-			);		
+			$headers = array('Content-Type: application/json', 'Authorization: Bearer ' . $access_token);
 
 			$ch = curl_init($url);
 			curl_setopt($ch, CURLOPT_CUSTOMREQUEST, "POST");
@@ -44,14 +39,10 @@ if (!is_null($events['events'])) {
 			curl_setopt($ch, CURLOPT_FOLLOWLOCATION, 1);
 			$result = curl_exec($ch);
 			curl_close($ch);
-			echo $result . "\r\n";
 
+			echo $result . "\r\n";
 		}
 	}
 }
-
-
-
 echo "OK";
-
 ?>

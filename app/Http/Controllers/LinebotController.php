@@ -76,8 +76,8 @@ class LinebotController extends Controller {
 					$result = curl_exec($ch);
 					curl_close($ch);
 
-					echo $result . "\r\n";
-					file_put_contents("./test.txt", $result);
+					//echo $result . "\r\n";
+					//file_put_contents("./test.txt", $result);
 				}
 			}
 		}

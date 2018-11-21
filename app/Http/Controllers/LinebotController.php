@@ -35,7 +35,7 @@ class LinebotController extends Controller {
 
 	public function autoreply()
 	{
-		$access_token = 't/xNpwqsTKwcyJFWZ1EWncDEk4fOZ6sYPUXYKGapCCRkZRpd51BqoJD6znAlZMa4OkomjZT8Q8yvRLskNXmPotVhZnOJ1BiRK42YBbYr/+vkYXBeA1+ksR1zMGPpPr+28/iM5wVgruEPQgC/vD4xmAdB04t89/1O/w1cDnyilFU=';
+		$access_token = 'OrMfn7L7gBETHioI8fBCzEI+Z9uBnU6BShLM1pfvO6SomeFUsJtf3wuS9KcvLyObOkomjZT8Q8yvRLskNXmPotVhZnOJ1BiRK42YBbYr/+v77gxyOf/g4aVycuSxjyudf7MXlwzZqvkyUm1r16m6bwdB04t89/1O/w1cDnyilFU=';
 
 		// Get POST body content
 		$content = file_get_contents('php://input');

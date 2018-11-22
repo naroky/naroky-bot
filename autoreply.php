@@ -1,5 +1,5 @@
 <?php
-$access_token = 't/xNpwqsTKwcyJFWZ1EWncDEk4fOZ6sYPUXYKGapCCRkZRpd51BqoJD6znAlZMa4OkomjZT8Q8yvRLskNXmPotVhZnOJ1BiRK42YBbYr/+vkYXBeA1+ksR1zMGPpPr+28/iM5wVgruEPQgC/vD4xmAdB04t89/1O/w1cDnyilFU=';
+$access_token = 'XeUuwvrwWUW0jEVCRJ/awcN/LSgVw0nrSM8cw/3u6ZTTBMLv9vNEeTeZdvax38qkOkomjZT8Q8yvRLskNXmPotVhZnOJ1BiRK42YBbYr/+tiBzAaH9SwnjGIkpqySjhkVp0RIXhvj5g0KfX6Ie6LgQdB04t89/1O/w1cDnyilFU=';
 
 // Get POST body content
 $content = file_get_contents('php://input');
@@ -40,10 +40,10 @@ if (!is_null($events['events'])) {
 			$result = curl_exec($ch);
 			curl_close($ch);
 
-			echo $result . "\r\n";
-			file_put_contents("./test.txt", $result);
+			//echo $result . "\r\n";
+			// file_put_contents("./test.txt", $result);
 		}
 	}
 }
-echo "OK";
+//echo "OK";
 ?>

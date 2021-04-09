@@ -1,7 +1,7 @@
 <?php 
 echo "I am a bot";
 
-$tokken = "t/xNpwqsTKwcyJFWZ1EWncDEk4fOZ6sYPUXYKGapCCRkZRpd51BqoJD6znAlZMa4OkomjZT8Q8yvRLskNXmPotVhZnOJ1BiRK42YBbYr/+vkYXBeA1+ksR1zMGPpPr+28/iM5wVgruEPQgC/vD4xmAdB04t89/1O/w1cDnyilFU=";
+$tokken = "XeUuwvrwWUW0jEVCRJ/awcN/LSgVw0nrSM8cw/3u6ZTTBMLv9vNEeTeZdvax38qkOkomjZT8Q8yvRLskNXmPotVhZnOJ1BiRK42YBbYr/+tiBzAaH9SwnjGIkpqySjhkVp0RIXhvj5g0KfX6Ie6LgQdB04t89/1O/w1cDnyilFU=";
 
 $headers = array(
     'Authorization: Bearer '.$tokken,

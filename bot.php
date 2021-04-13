@@ -2,6 +2,11 @@
 $accessToken = "XeUuwvrwWUW0jEVCRJ/awcN/LSgVw0nrSM8cw/3u6ZTTBMLv9vNEeTeZdvax38qkOkomjZT8Q8yvRLskNXmPotVhZnOJ1BiRK42YBbYr/+tiBzAaH9SwnjGIkpqySjhkVp0RIXhvj5g0KfX6Ie6LgQdB04t89/1O/w1cDnyilFU=";//copy Channel access token ตอนที่ตั้งค่ามาใส่
     
 $content = file_get_contents('php://input');
+if ($content == "")
+{
+    echo "Hello V2";
+    exit;
+}
 $arrayJson = json_decode($content, true);
 
 $arrayHeader = array();

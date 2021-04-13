@@ -77,6 +77,7 @@ function replyMsg($arrayHeader,$arrayPostData){
     curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
     $result = curl_exec($ch);
     curl_close ($ch);
+    $myfile = file_put_contents('logs.txt', $result.PHP_EOL , FILE_APPEND | LOCK_EX);
 }
 exit;
 ?>
